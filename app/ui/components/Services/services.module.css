@@ -1,0 +1,160 @@
+.container {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    padding: 10vh 15vw 0 15vw;
+    justify-content: center;
+    position: relative;
+    background-color: var(--bg);
+    gap: 10vh;
+}
+
+.scrollOffset {
+    position: absolute;
+    top: -80px;
+    height: 80px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.title {
+    font-size: var(--superTitle);
+    font-weight: 500;
+    animation-delay: .3s;
+    opacity: 1;
+    color: var(--text);
+    text-align: center;
+}
+
+.hr {
+    height: 5px;
+    background-color: var(--navbar);
+    border: none;
+    align-self: center;
+    animation-delay: 1.5s;
+    width: 4vw;
+    margin-bottom: 10vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.hexagon {
+    width: 15vw;
+    height: 17vw;
+    perspective: 1000px; /* Añadir perspectiva para el efecto 3D */
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s;
+    transform-origin: center;
+}
+
+.hexagon:hover .card {
+    transform: rotateY(180deg);
+}
+
+.logo {
+    width: 10vw;
+    height: auto;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    clip-path: polygon(
+        50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navbar);
+    color: #fff;
+    transform-style: preserve-3d;
+}
+
+.mainColor {
+    background-color: var(--main);
+}
+
+.secondaryColor {
+    background-color: var(--secondary);
+}
+
+.terciaryColor {
+    background-color: var(--terciary);
+}
+
+.fourthColor {
+    background-color: var(--fourth);
+}
+
+.textContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(30px);  
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    cursor: default;
+}
+
+.pContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(-30px) rotateY(180deg);  
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--bg);
+    cursor: default;
+}
+
+.paragraph {
+    width: 12vw;
+}
+
+.back {
+    background-color: #333;
+    transform: rotateY(180deg);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    transform: translateX(17%) translateY(-20%);
+}
+
+

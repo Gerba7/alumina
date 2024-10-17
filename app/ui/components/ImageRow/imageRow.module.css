@@ -1,0 +1,14 @@
+.container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--textColor);
+    color: #fff;
+    padding: 10vh 15vw;
+    justify-content: center;
+    position: relative;
+    background-image: url('../../../../public/images/Cover3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
