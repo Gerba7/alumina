@@ -13,36 +13,49 @@ import People from '../../../../public/images/people.jpg';
 const Values = () => {
 
     const [animate, setAnimate] = useState(false);
+    const [animate2, setAnimate2] = useState(false);
 
     const animationRef = useRef();
+    const animation2Ref = useRef();
+
 
 
     useEffect(() => {
-
         const animationObserver = new IntersectionObserver(
-        (entries) => {
-            if (entries[0].isIntersecting) {
-            setAnimate(true);
-            } else {
-            setAnimate(false);
-            }
-        },
-        { threshold: 0 }
+            (entries, observer) => { 
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === animationRef.current) {
+                            setAnimate(true);
+                            observer.unobserve(entry.target);
+                        } else if (entry.target === animation2Ref.current) {
+                            setAnimate2(true);
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            },
+            { threshold: 0 }
         );
-
+    
         if (animationRef.current) {
-        animationObserver.observe(animationRef.current);
+            animationObserver.observe(animationRef.current);
         }
-
+    
+        if (animation2Ref.current) {
+            animationObserver.observe(animation2Ref.current);
+        }
+    
         return () => {
-
-        if (animationRef.current) {
-            animationObserver.unobserve(animationRef.current);
-        }
-
+            if (animationRef.current) {
+                animationObserver.unobserve(animationRef.current);
+            }
+    
+            if (animation2Ref.current) {
+                animationObserver.unobserve(animation2Ref.current);
+            }
         };
-
-    }, [])
+    }, []);
 
 
   return (
@@ -56,11 +69,11 @@ const Values = () => {
         </div>
         <div className={styles.content}>
             <div className={styles.gridContainer}>
-                <div className={styles.itemContainer}>
-                    <div className={styles.imgContainer}>
+                <div className={styles.itemContainer} ref={animation2Ref}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
                         <h3 className={styles.valueText}>Visión Cultural</h3>
-                        <Image src={Cultural} className={styles.img} />
+                        <Image src={Cultural} className={`${styles.img}`} />
                     </div>
                     <div className={`${styles.textContainer} ${styles.main}`}>
                         <p className={styles.text}>
@@ -70,7 +83,7 @@ const Values = () => {
                     </div>
                 </div>
                 <div className={styles.itemContainer}>
-                    <div className={styles.imgContainer}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
                         <h3 className={styles.valueText}>Innovación y Agilidad</h3>
                         <Image src={Innovation} className={styles.img} />
@@ -89,7 +102,7 @@ const Values = () => {
                             Buscamos generar el mayor impacto posible de la manera más eficiente.
                         </p>
                     </div>
-                    <div className={styles.imgContainer}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Integral y Sistémico</h3>
                         <Image src={System} className={styles.img} />
@@ -102,7 +115,7 @@ const Values = () => {
                             su bienestar y realización en el ámbito laboral. Buscamos desarrollar ambientes laboral más felices.
                         </p>
                     </div>
-                    <div className={styles.imgContainer}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Centrado en las Personas</h3>
                         <Image src={People} className={styles.img} />

@@ -156,18 +156,16 @@
 
 @media (min-width: 800px) and (max-width: 999px) {
 
-    .wrapper {
-        padding: 0vh 5vw;
-        gap: 3vh;
+    .container {
+        padding: 10vh 5vw;
     }
 }
 
 
 @media (min-width: 1000px) and (max-width: 1199px) {
 
-    .wrapper {
-        padding: 0vh 10vw;
-        gap: 3vh;
+    .container {
+        padding: 10vh 10vw;
     }
 
 }
@@ -175,8 +173,8 @@
 
 @media (min-width: 1200px) and (max-width: 1499px) {
 
-    .wrapper {
-        padding: 0vh 15vw;
+    .container {
+        padding: 10vh 10vw;
     }
 
 }

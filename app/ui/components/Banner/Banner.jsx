@@ -15,14 +15,13 @@ const Banner = () => {
   useEffect(() => {
 
     const animationObserver = new IntersectionObserver(
-    (entries) => {
-        if (entries[0].isIntersecting) {
-        setAnimate(true);
-        } else {
-        setAnimate(false);
-        }
-    },
-    { threshold: 0 }
+      (entries, observer) => {
+          if (entries[0].isIntersecting) {
+            setAnimate(true);
+            observer.unobserve(entries[0].target);
+          }
+      },
+      { threshold: 0 }
     );
 
     if (animationRef.current) {
