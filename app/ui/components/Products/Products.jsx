@@ -120,7 +120,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''}`} style={{top: '45vh', right: 0}} ref={animation3Ref}>
+                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''}`} style={{right: 0}} ref={animation3Ref}>
                     <h3 className={styles.productTitle}>Flexibilidad Psicológica en las Personas</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -135,7 +135,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn : ''}`} style={{top: '90vh'}} ref={animation4Ref}>
+                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn : ''}`} style={{top: '45vh'}} ref={animation4Ref}>
                     <h3 className={styles.productTitle}>Mindset Ágil e Innovador</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -150,7 +150,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate5 ? styles.slideOut : ''}`} style={{top: '135vh', right: 0}} ref={animation5Ref}>
+                <div className={`${styles.productContainer} ${animate5 ? styles.slideOut : ''}`} style={{top: '45vh', right: 0}} ref={animation5Ref}>
                     <h3 className={styles.productTitle}>Seguridad Emocional en el Liderazgo</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />

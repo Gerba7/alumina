@@ -1,5 +1,5 @@
 .container {
-    height: 220vh;
+    height: 130vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -124,13 +124,17 @@
 .productContainer {
     position: absolute;
     top: 0;
-    height: 35vh;
-    width: 50%;
+    height: 40vh;
+    width: 45%;
     background-color: var(--navbar);
     border-radius: 10px;
     box-shadow: var(--shadow);
     padding: 2vw;
     color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .slideIn {
@@ -179,7 +183,7 @@
 @media (min-width: 800px) and (max-width: 999px) {
 
     .container {
-        padding: 10vh 5vw 0 5vw;
+        padding: 10vh 10vw 0 10vw;
     }
 
 }
@@ -189,6 +193,10 @@
 
     .container {
         padding: 10vh 10vw 0 10vw;
+    }
+
+    .productContainer {
+        height: 35vh;
     }
 
 }
