@@ -16,12 +16,14 @@ const Products = () => {
     const [animate3, setAnimate3] = useState(false);
     const [animate4, setAnimate4] = useState(false);
     const [animate5, setAnimate5] = useState(false);
+    const [animate6, setAnimate6] = useState(false);
 
     const animationRef = useRef();
     const animation2Ref = useRef();
     const animation3Ref = useRef();
     const animation4Ref = useRef();
     const animation5Ref = useRef();
+    const animation6Ref = useRef();
 
 
     useEffect(() => {
@@ -43,6 +45,9 @@ const Products = () => {
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation5Ref.current) {
                             setAnimate5(true);
+                            observer.unobserve(entry.target);
+                        } else if (entry.target === animation6Ref.current) {
+                            setAnimate6(true);
                             observer.unobserve(entry.target);
                         }
                     }
@@ -70,6 +75,10 @@ const Products = () => {
         if (animation5Ref.current) {
             animationObserver.observe(animation5Ref.current);
         }
+
+        if (animation6Ref.current) {
+            animationObserver.observe(animation6Ref.current);
+        }
     
         return () => {
             if (animationRef.current) {
@@ -91,77 +100,72 @@ const Products = () => {
             if (animation5Ref.current) {
                 animationObserver.unobserve(animation5Ref.current);
             }
+
+            if (animation6Ref.current) {
+                animationObserver.unobserve(animation6Ref.current);
+            }
         };
     }, []);
 
 
   return (
     <div className={styles.container} ref={animationRef}>
-        <div className={styles.scrollOffset} id='productos'></div>
+        <div className={styles.scrollOffset} id='servicios'></div>
         <div className={styles.backgroundContainer} />
         <div className={styles.wrapper}>
             <h1 className={`${styles.title} ${animate ? styles.visible : ''}`}>
-                Productos
+                Servicios
             </h1>
             <hr className={`${styles.hr} ${animate ? styles.visible : ''}`} />
             <div className={styles.content}>
-                <div className={`${styles.productContainer} ${animate2 ? styles.slideIn : ''}`} ref={animation2Ref}>
-                    <h3 className={styles.productTitle}>Rompiendo barreras con Seguridad Psicológica</h3>
+                <div className={`${styles.productContainer} ${animate2 ? styles.slideIn : ''} ${styles.product2}`} ref={animation2Ref}>
+                    <h3 className={styles.productTitle}>Seguridad Psicológica</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Acompañar en la identificación de barreras que impiden el desempeño deseado.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Psicoeudación sobre el miedo y su relación con el desarrollo del potencial.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Brindar herramientas para un correcto manejo del estrés y presión laboral.
+                            Acompañamos el desarrollo de espacios de trabajo seguros e inclusivos donde todos puedan ser ellos mismos, aportar sus ideas sin
+                            miedo y sentirse parte de un equipo sólido y confiable.
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''}`} style={{right: 0}} ref={animation3Ref}>
-                    <h3 className={styles.productTitle}>Flexibilidad Psicológica en las Personas</h3>
+                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''} ${styles.product3}`} style={{right: 0}} ref={animation3Ref}>
+                    <h3 className={styles.productTitle}>Flexibilidad Psicológica</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Acompañar en la identificación de barreras que impiden el desempeño deseado.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Psicoeducación sobre el miedo y su relación con el desarrollo del potencial.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Brindar herramientas para un correcto manejo del estrés y presión laboral.
+                            Te ayudamos a que tu equipo pueda adaptarse rápidamente a los cambios, tomando decisiones conscientes y sabiendo cómo
+                            afrontar las dificultades. Porque solo cuando se tienen las herramientas para adaptarse, el cambio es verdaderamente
+                            transformador.
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn : ''}`} style={{top: '46vh'}} ref={animation4Ref}>
-                    <h3 className={styles.productTitle}>Mindset Ágil e Innovador</h3>
+                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn : ''} ${styles.product4}`} style={{top: '46vh'}} ref={animation4Ref}>
+                    <h3 className={styles.productTitle}>Agilidad a la Carta</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Conscientizar sobre los beneficios de implementar marcos ágiles de trabajo y metodologías innovadoras.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Brindar herramientas que fomenten una mayor productividad a nivel individual y/o grupal.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Compartir ejercicios para desarrollar el foco atencional.
+                            Agilidad no es solo trabajar rápido, es adaptarse al contexto y a los cambios en tiempo real. Te ayudamos a que tu organización no
+                            solo reaccione con velocidad, sino que se anticipe, se transforme y aproveche las oportunidades con claridad y foco.
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate5 ? styles.slideOut : ''}`} style={{top: '46vh', right: 0}} ref={animation5Ref}>
-                    <h3 className={styles.productTitle}>Seguridad Emocional en el Liderazgo</h3>
+                <div className={`${styles.productContainer} ${animate5 ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={animation5Ref}>
+                    <h3 className={styles.productTitle}>Coaching Profesional</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Desarrollar habilidades para crear un entorno de trabajo seguro mediante comunicación efectiva y asertiva.
+                            Acompañamiento individual o grupal, adaptado a lo que necesites. Potenciamos tus fortalezas, eliminamos bloqueos y te ayudamos
+                            a abordar desafíos con claridad, confianza y foco.
                         </p>
+                    </div>
+                </div>
+                <div className={`${styles.productContainer} ${animate6 ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={animation6Ref}>
+                    <h3 className={styles.productTitle}>Equipos de Verdad</h3>
+                    <div className={styles.productItem}>
+                        <Image className={styles.logo} src={Logo} alt='logo' />
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Aumentar la conciencia emocional y la inteligencia emocional.
-                        </p>
-                        <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Desarrollar habilidades para una funcional gestión de los pensamientos, emociones y acciones.
+                            Te ayudamos a crear equipos autónomos, autoorganizados y motivados. Equipos que no solo cumplen con su tarea, sino que se
+                            sienten parte del proceso, se adaptan rápidamente y avanzan juntos.
                         </p>
                     </div>
                 </div>

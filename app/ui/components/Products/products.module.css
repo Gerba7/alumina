@@ -1,5 +1,5 @@
 .container {
-    height: 130vh;
+    height: 180vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -105,6 +105,15 @@
     }
 }
 
+@keyframes slideIn2 {
+    0% {
+        top: 120vh;
+    }
+    100% {
+        top: 92vh;
+    }
+}
+
 @keyframes slideOut {
     0% {
         right: -30%;
@@ -141,6 +150,10 @@
     animation: slideIn 2s ease forwards;
 }
 
+.slideIn2 {
+    animation: slideIn2 2s ease forwards;
+}
+
 .slideOut {
     animation: slideOut 2s ease forwards;
 }
@@ -159,7 +172,7 @@
 
 .logo {
     position: absolute;
-    bottom: 0;
+    bottom: -35%;
     right: 0;
     width: 15vw;
     height: auto;
@@ -169,13 +182,77 @@
 .productTips {
     display: flex;
     font-size: var(--paragraph);
+    text-align: center;
 }
 
 
 
 @media  (max-width: 799px) {
 
-    
+    .container {
+        height: 210vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        color: var(--text);
+        justify-content: center;
+        position: relative;
+        background-color: var(--bg);
+        padding: 10vh 5vw 0 5vw;
+    }
+
+    .title {
+        font-size: var(--superTitleMobile);
+    }
+
+    .hr {
+        width: 10vw;
+        margin-bottom: 5vh;
+    }
+
+    .productTitle {
+        font-size: var(--title2Mobile);
+    }
+
+    .productTips {
+        font-size: var(--paragraphMobile);
+    }
+
+    .productContainer {
+        position: absolute;
+        top: 0;
+        height: 30vh;
+        width: 100%;
+        background-color: var(--navbar);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        padding: 5vw;
+        color: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .product3 {
+        top: 34vh;
+        right: 0; 
+    }
+
+    .product4 {
+        top: 68vh !important;
+        right: 0; 
+    }
+
+    .product5 {
+        top: 102vh !important;
+        right: 0; 
+    }
+
+    .product6 {
+        top: 136vh !important;
+        left: 0 !important; 
+    }
 
 }
 

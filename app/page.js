@@ -17,8 +17,8 @@ export default function Home() {
         <ImageRow />
         <Values />
         {/* <Reasons /> */}
-        <Services />
-        {/* <Products /> */}
+        {/* <Services /> */}
+        <Products />
         <Contact />
       </main>
   );
