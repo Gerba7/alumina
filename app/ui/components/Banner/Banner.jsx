@@ -48,7 +48,8 @@ const Banner = () => {
           </h1>
           <hr className={styles.hr} />
           <h3 className={`${styles.subtitle} ${animate ? styles.visible : ''}`} ref={animationRef}>
-            Somos un grupo interdisciplinario de <b>profesionales apasionados</b> <br/>por las personas y el desarrollo del potencial organizacional.
+            <b>Somos un equipo que está acá para generar cambio de verdad</b>. Lo hacemos con pasión, disfrute y, sobre
+            todo, poniendo el foco en lo que más importa: las personas.
           </h3>
         </div>
         <div className={`${styles.wrapper} ${styles.row}`}>
@@ -57,7 +58,9 @@ const Banner = () => {
               ¿Que hacemos?
             </div>
             <h3 className={`${styles.subtitle} ${animate ? styles.visible : ''}`}>
-              Consultoría especializada en psicología organizacional y coaching, centrada en la necesidad de cada cliente.
+            <b>Catalizamos procesos de transformación</b>. Nos enfocamos en la mentalidad, actitud y habilidades de
+              todos en la organización. Ayudamos a abrazar la incertidumbre, ser ágiles, flexibles y crear seguridad
+              emocional.
             </h3>
           </div>
           <div className={styles.right}>
@@ -65,7 +68,8 @@ const Banner = () => {
               ¿Por que lo hacemos?
             </div>
             <h3 className={`${styles.subtitle} ${animate ? styles.visible : ''}`}>
-              Nuestro propósito es acompañar a las organizaciones en conseguir su máximo potencial a través del desarrollo de las personas.
+              Porque un equipo fuerte es un equipo que se siente seguro y capaz de evolucionar. <b>Estamos acá para
+              hacer cambios que realmente marquen la diferencia.</b>
             </h3>
           </div>
         </div>

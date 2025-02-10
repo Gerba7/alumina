@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     align-items: center;
     justify-content: center;
     gap: 2vh;
@@ -75,6 +75,7 @@
     animation-delay: .6s;
     opacity: 0;
     color: var(--text);
+    
 }
 
 @keyframes widthIn {
@@ -128,7 +129,7 @@
 @media  (max-width: 799px) {
     
     .container {
-        padding: 10vh 0vw;
+        padding: 10vh 5vw;
         gap: 10vh;
     }
 
@@ -149,13 +150,12 @@
 
     .left {
         padding: 5vw;
-        margin: 5vw;
+        margin-bottom: 5vh;
     }
 
     .right {
         padding: 5vw;
         gap: var(--gap);
-        margin: 5vw;
     }
 
     .title {
