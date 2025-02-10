@@ -14,15 +14,9 @@ const Values = () => {
 
     const [animate, setAnimate] = useState(false);
     const [animate2, setAnimate2] = useState(false);
-    const [animate3, setAnimate3] = useState(false);
-    const [animate4, setAnimate4] = useState(false);
-    const [animate5, setAnimate5] = useState(false);
 
     const animationRef = useRef();
     const animation2Ref = useRef();
-    const animation3Ref = useRef();
-    const animation4Ref = useRef();
-    const animation5Ref = useRef();
 
 
 
@@ -36,15 +30,6 @@ const Values = () => {
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation2Ref.current) {
                             setAnimate2(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation3Ref.current) {
-                            setAnimate3(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation4Ref.current) {
-                            setAnimate4(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation5Ref.current) {
-                            setAnimate5(true);
                             observer.unobserve(entry.target);
                         }
                     }
@@ -60,18 +45,6 @@ const Values = () => {
         if (animation2Ref.current) {
             animationObserver.observe(animation2Ref.current);
         }
-
-        if (animation3Ref.current) {
-            animationObserver.observe(animation3Ref.current);
-        }
-
-        if (animation4Ref.current) {
-            animationObserver.observe(animation4Ref.current);
-        }
-
-        if (animation5Ref.current) {
-            animationObserver.observe(animation5Ref.current);
-        }
     
         return () => {
             if (animationRef.current) {
@@ -80,18 +53,6 @@ const Values = () => {
     
             if (animation2Ref.current) {
                 animationObserver.unobserve(animation2Ref.current);
-            }
-
-            if (animation3Ref.current) {
-                animationObserver.unobserve(animation3Ref.current);
-            }
-
-            if (animation4Ref.current) {
-                animationObserver.unobserve(animation4Ref.current);
-            }
-
-            if (animation5Ref.current) {
-                animationObserver.unobserve(animation5Ref.current);
             }
         };
     }, []);
@@ -121,8 +82,8 @@ const Values = () => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.itemContainer} ref={animation3Ref}>
-                    <div className={`${styles.imgContainer} ${animate3 && styles.slideIn}`}>
+                <div className={styles.itemContainer}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
                         <h3 className={styles.valueText}>Agilidad de verdad</h3>
                         <Image src={Innovation} className={styles.img} />
@@ -134,27 +95,27 @@ const Values = () => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.itemContainer} ref={animation4Ref}>
+                <div className={styles.itemContainer}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
                             Las organizaciones son un todo. <b>Sabemos cómo las acciones a nivel micro impactan en lo macro</b> y trabajamos
                             para que todo se alinee de manera armónica.
                         </p>
                     </div>
-                    <div className={`${styles.imgContainer} ${animate4 && styles.slideOut}`}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Mirada sistémica</h3>
                         <Image src={System} className={styles.img} />
                     </div>
                 </div>
-                <div className={styles.itemContainer} ref={animation5Ref}>
+                <div className={styles.itemContainer}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
                             <b>Las organizaciones deben crear espacios donde las personas encuentren realización y disfrute.</b> Equipos
                             felices son equipos que marcan la diferencia.
                         </p>
                     </div>
-                    <div className={`${styles.imgContainer} ${animate5 && styles.slideOut}`}>
+                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Felicidad organizacional</h3>
                         <Image src={People} className={styles.img} />
