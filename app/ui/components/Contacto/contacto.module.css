@@ -125,13 +125,31 @@
 
 @media  (max-width: 799px) {
 
+    .container {
+        padding: 10vh 5vw;
+    }
+
     .wrapper {
-        padding: 0vh 5vw;
+        padding: 0vh 0vw;
         gap: 3vh;
     }
 
+    .content {
+        flex-direction: column;
+        gap: 10vh;
+    } 
+
     .title {
         font-size: var(--titleMobile);
+    }
+
+    .titleConatiner {
+        width: 100%;
+    }
+
+    .subtitle {
+        font-size: var(--titleMobile);
+        width: 100%;
     }
     
     .texts {
@@ -141,6 +159,14 @@
     .title2 {
         font-size: var(--title2Mobile);
         font-weight: 700;
+    }
+
+    .left {
+        order: 2;
+    }
+
+    .right {
+        order: 1;
     }
 
     .form {

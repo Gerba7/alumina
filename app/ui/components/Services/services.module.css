@@ -187,7 +187,43 @@
 
 @media  (max-width: 799px) {
 
-    
+    .container {
+        height: 340vh;
+    }
+
+    .title {
+        font-size: var(--superTitleMobile);
+    }
+
+    .hr {
+        width: 10vw;
+    }
+
+    .content {
+        height: 100%;
+        gap: 5vh;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .hexagon {
+        width: 90vw; /*  15vw */
+        height: 100vw;/*  17vw */
+        perspective: 1000px; 
+    }
+
+    .paragraph {
+        width: 75vw;  /* 12vw */
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 5vh;
+        transform: translateX(0%) translateY(0%);
+    }
 
 }
 

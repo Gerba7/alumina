@@ -128,11 +128,30 @@
 @media  (max-width: 799px) {
     
     .container {
-        padding: 5vh 0vw;
+        padding: 10vh 0vw;
+        gap: 10vh;
     }
 
     .wrapper {
-        padding: 5vh 0;
+        height: 100%;
+        gap: 5vh;
+    }
+
+    .hr {
+        width: 10vw;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .left {
+        padding: 5vw;
+    }
+
+    .right {
+        padding: 5vw;
+        gap: var(--gap);
     }
 
     .title {
@@ -140,10 +159,22 @@
         text-align: center;
     }
 
+    .subtitle {
+        font-size: var(--title2Mobile);
+    }
+
+    .title2 {
+        font-size: var(--title2Mobile);
+    }
+
+    .description {
+        font-size: var(--subtitleMobile);
+    }
+
     .description {
         font-size: 16px;
         width: 80%;
-
+        height: 100%;
     }
 
 }

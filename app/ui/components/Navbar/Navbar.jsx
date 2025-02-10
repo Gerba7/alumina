@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className={styles.wrapper}>
         <div className={styles.left}>
           <div className={styles.burger} onClick={toggleMenu}>
-            <div className={styles.menuItem} style={{ color: navHeight && '#788586' }}>
+            <div className={styles.menuItem} style={{ color: navHeight && '#F5F5F5' }}>
               {displayMenu ? (
                 <MenuIcon color='inherit' style={{ fontSize: 'inherit' }} />
               ) : (
@@ -57,7 +57,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link className={styles.logoLink} href='/'>
-            <h1 className={styles.title}>Jochy</h1>
+            <h1 className={styles.title}>Alumina Consultoría</h1>
             <Image
               className={`${styles.logoNavbar} ${navHeight ? styles.visible : ''}`}
               src={navHeight ? ALUMINA_LOGO_WHITE : ALUMINA_LOGO}

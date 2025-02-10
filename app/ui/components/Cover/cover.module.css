@@ -111,16 +111,47 @@
 
   @media (max-width: 799px) {
 
+    .container {
+      height: 100vh;
+    }
+
+    .container {
+      background-image: url('../../../../public/images/AluminaCoverSMobile.jpg');
+    }
+  
+    .back {
+      background-image: url('../../../../public/images/AluminaCoverSubjectMobile.png');
+    }
+
+    .textsContainer {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 5%;
+      top: 60%;
+      transform: translateY(-50%);
+      width: 50vw;
+      gap: 2vh;
+    }
+  
+    .title {
+      font-size: var(--titleMobile);
+      font-weight: 300;
+      text-align: center;
+      font-style: italic;
+      filter: drop-shadow(1px 1px 2px #0000008e);
+    }
+
     .link {
       bottom: 120px;
     }
 
     .logoImg {
-      width: 300px;
+      display: none;
     }
 
     .coverLogo {
-      display: flex;
+      display: none;
     }
 
     .arrow {

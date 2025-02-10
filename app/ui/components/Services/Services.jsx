@@ -88,7 +88,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className={styles.hexagon}>
-                        <div className={`${styles.card} ${animate2 && styles.flip}`}>
+                        <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.2s'}}>
                             <div className={`${styles.front} ${styles.mainColor}`} />
                             <div className={styles.textContainer}>
                                 <h3 style={{textAlign: 'center'}}>Flexibilidad<br/>Psicológica</h3>
@@ -104,7 +104,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className={styles.hexagon}>
-                        <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.3s'}}>
+                        <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.4s'}}>
                             <div className={`${styles.front} ${styles.secondaryColor}`} />
                             <div className={styles.textContainer}>
                                 <h3 style={{textAlign: 'center'}}>Agilidad<br/>a la Carta</h3>
@@ -136,7 +136,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className={styles.hexagon}>
-                        <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.9s'}}>
+                        <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.8s'}}>
                             <div className={`${styles.front} ${styles.fourthColor}`} />
                             <div className={styles.textContainer}>
                                 <h3 style={{textAlign: 'center'}}>Equipos<br/>de Verdad</h3> 
