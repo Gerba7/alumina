@@ -52,7 +52,7 @@ const Navbar = () => {
               {displayMenu ? (
                 <MenuIcon color='inherit' style={{ fontSize: 'inherit' }} />
               ) : (
-                <CloseIcon color='inherit' style={{ fontSize: 'inherit' }} />
+                <CloseIcon color='#F5F5F5' style={{ fontSize: 'inherit' }} />
               )}
             </div>
           </div>
