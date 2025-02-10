@@ -67,7 +67,7 @@
 .top {
     display: flex;
     flex-direction: row;
-    gap: 1vw;
+    gap: 1.3vw;
 }
 
 @keyframes FlipCard {
@@ -179,7 +179,7 @@
 .bottom {
     display: flex;
     flex-direction: row;
-    gap: 1vw;
+    gap: 1.3vw;
     transform: translateX(17%) translateY(-20%);
 }
 
