@@ -17,6 +17,9 @@ const Values = () => {
 
     const animationRef = useRef();
     const animation2Ref = useRef();
+    const animation3Ref = useRef();
+    const animation4Ref = useRef();
+    const animation5Ref = useRef();
 
 
 
@@ -29,6 +32,15 @@ const Values = () => {
                             setAnimate(true);
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation2Ref.current) {
+                            setAnimate2(true);
+                            observer.unobserve(entry.target);
+                        } else if (entry.target === animation3Ref.current) {
+                            setAnimate2(true);
+                            observer.unobserve(entry.target);
+                        } else if (entry.target === animation4Ref.current) {
+                            setAnimate2(true);
+                            observer.unobserve(entry.target);
+                        } else if (entry.target === animation5Ref.current) {
                             setAnimate2(true);
                             observer.unobserve(entry.target);
                         }
@@ -45,6 +57,18 @@ const Values = () => {
         if (animation2Ref.current) {
             animationObserver.observe(animation2Ref.current);
         }
+
+        if (animation3Ref.current) {
+            animationObserver.observe(animation2Ref.current);
+        }
+
+        if (animation4Ref.current) {
+            animationObserver.observe(animation2Ref.current);
+        }
+
+        if (animation5Ref.current) {
+            animationObserver.observe(animation2Ref.current);
+        }
     
         return () => {
             if (animationRef.current) {
@@ -52,6 +76,18 @@ const Values = () => {
             }
     
             if (animation2Ref.current) {
+                animationObserver.unobserve(animation2Ref.current);
+            }
+
+            if (animation3Ref.current) {
+                animationObserver.unobserve(animation2Ref.current);
+            }
+
+            if (animation4Ref.current) {
+                animationObserver.unobserve(animation2Ref.current);
+            }
+
+            if (animation5Ref.current) {
                 animationObserver.unobserve(animation2Ref.current);
             }
         };
@@ -82,7 +118,7 @@ const Values = () => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.itemContainer}>
+                <div className={styles.itemContainer} ref={animation3Ref}>
                     <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
                         <h3 className={styles.valueText}>Agilidad de verdad</h3>
@@ -95,7 +131,7 @@ const Values = () => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.itemContainer}>
+                <div className={styles.itemContainer} ref={animation4Ref}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
                             Las organizaciones son un todo. <b>Sabemos cómo las acciones a nivel micro impactan en lo macro</b> y trabajamos
@@ -108,7 +144,7 @@ const Values = () => {
                         <Image src={System} className={styles.img} />
                     </div>
                 </div>
-                <div className={styles.itemContainer}>
+                <div className={styles.itemContainer} ref={animation5Ref}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
                             <b>Las organizaciones deben crear espacios donde las personas encuentren realización y disfrute.</b> Equipos

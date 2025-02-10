@@ -134,24 +134,28 @@
 
     .wrapper {
         height: 100%;
-        gap: 5vh;
+        gap: 2vh;
     }
 
     .hr {
         width: 10vw;
+        margin-bottom: 5vh;
     }
 
     .row {
         flex-direction: column;
+        gap: 0vh;
     }
 
     .left {
         padding: 5vw;
+        margin: 5vw;
     }
 
     .right {
         padding: 5vw;
         gap: var(--gap);
+        margin: 5vw;
     }
 
     .title {
