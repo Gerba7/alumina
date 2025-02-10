@@ -18,7 +18,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    animation: resize 3s ease;
+    animation: resize 3s ease
 }
 
   .back {
@@ -104,7 +104,7 @@
     font-weight: 300;
     text-align: center;
     font-style: italic;
-    filter: drop-shadow(1px 1px 2px #0000008e);
+    filter: drop-shadow(1px 1px 45px #F5F5F5);
   }
 
   
@@ -128,7 +128,7 @@
       flex-direction: column;
       position: absolute;
       right: 5%;
-      top: 60%;
+      top: 50%;
       transform: translateY(-50%);
       width: 50vw;
       gap: 2vh;
