@@ -61,7 +61,7 @@ const Navbar = () => {
             <Image
               className={`${styles.logoNavbar} ${navHeight ? styles.visible : ''}`}
               src={navHeight ? ALUMINA_LOGO_WHITE : ALUMINA_LOGO}
-              alt='JOCHY_LOGO'
+              alt='ALUMINA_LOGO'
               width={'auto'}
               height={navHeight ? 30 : 70}
               priority

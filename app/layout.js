@@ -7,8 +7,8 @@ const montserrat = Montserrat({ subsets: ["latin"], display: 'swap', weight: ['3
 export const parisienne = Parisienne({ subsets: ["latin"], display: 'swap', weight: ['400'], });
 
 export const metadata = {
-  title: "Alúmina",
-  description: "Consultoría",
+  title: "Alúmina Consultoría",
+  description: "Somos un grupo interdisciplinario de profesionales apasionados por las personas y el desarrollo del potencial organizacional.",
 };
 
 export default function RootLayout({ children }) {

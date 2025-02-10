@@ -24,7 +24,7 @@ const Contact = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            <Image src={Logo} alt='jochy puertos logo' className={styles.logo} />
+            <Image src={Logo} alt='alumina logo' className={styles.logo} />
             <h3 className={styles.title2}>info@alumina.com.ar</h3>
             <h3 className={styles.title2}>+54 9 11 5996-6552</h3>
             <div className={styles.socialContainer}>
