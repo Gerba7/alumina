@@ -116,21 +116,21 @@
     }
 
     .container {
-      background-image: url('../../../../public/images/AluminaCoverSMobile.jpg');
+      background-image: url('../../../../public/images/AluminaCoverSMobile2.jpg');
     }
   
     .back {
-      background-image: url('../../../../public/images/AluminaCoverSubjectMobile.png');
+      background-image: url('../../../../public/images/AluminaCoverSubjectMobile2.png');
     }
 
     .textsContainer {
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: 5%;
-      top: 50%;
+      right: 10%;
+      top: 55%;
       transform: translateY(-50%);
-      width: 50vw;
+      width: 55vw;
       gap: 2vh;
     }
   
@@ -139,7 +139,7 @@
       font-weight: 300;
       text-align: center;
       font-style: italic;
-      filter: drop-shadow(1px 1px 2px #0000008e);
+      filter: drop-shadow(1px 1px 45px #F5F5F5);
     }
 
     .link {

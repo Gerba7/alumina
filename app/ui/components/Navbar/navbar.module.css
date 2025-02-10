@@ -172,6 +172,10 @@
         animation: opacity 1s linear forwards;
     }
 
+    .menuItem {
+        color: var(--text);
+    }
+
     .burger {
         display: flex;
         align-items: center;
