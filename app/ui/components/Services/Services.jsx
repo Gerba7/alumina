@@ -76,7 +76,7 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`}>
                             <div className={`${styles.front}`} />
                             <div className={styles.textContainer}>
-                                <h3>Seguridad<br/>Psicológica</h3>
+                                <h3 style={{textAlign: 'center'}}>Seguridad<br/>Psicológica</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
@@ -91,7 +91,7 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`}>
                             <div className={`${styles.front} ${styles.mainColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Flexibilidad<br/>Psicológica</h3>
+                                <h3 style={{textAlign: 'center'}}>Flexibilidad<br/>Psicológica</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
@@ -107,7 +107,7 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.3s'}}>
                             <div className={`${styles.front} ${styles.secondaryColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Agilidad<br/>a la Carta</h3>
+                                <h3 style={{textAlign: 'center'}}>Agilidad<br/>a la Carta</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
@@ -124,7 +124,7 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.6s'}}>
                             <div className={`${styles.front} ${styles.terciaryColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Coaching<br/>Profesional</h3>
+                                <h3 style={{textAlign: 'center'}}>Coaching<br/>Profesional</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
@@ -139,7 +139,7 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.9s'}}>
                             <div className={`${styles.front} ${styles.fourthColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Equipos<br/>de Verdad</h3> 
+                                <h3 style={{textAlign: 'center'}}>Equipos<br/>de Verdad</h3> 
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
