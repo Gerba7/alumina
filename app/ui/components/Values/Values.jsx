@@ -14,6 +14,9 @@ const Values = () => {
 
     const [animate, setAnimate] = useState(false);
     const [animate2, setAnimate2] = useState(false);
+    const [animate3, setAnimate3] = useState(false);
+    const [animate4, setAnimate4] = useState(false);
+    const [animate5, setAnimate5] = useState(false);
 
     const animationRef = useRef();
     const animation2Ref = useRef();
@@ -35,13 +38,13 @@ const Values = () => {
                             setAnimate2(true);
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation3Ref.current) {
-                            setAnimate2(true);
+                            setAnimate3(true);
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation4Ref.current) {
-                            setAnimate2(true);
+                            setAnimate4(true);
                             observer.unobserve(entry.target);
                         } else if (entry.target === animation5Ref.current) {
-                            setAnimate2(true);
+                            setAnimate5(true);
                             observer.unobserve(entry.target);
                         }
                     }
@@ -59,15 +62,15 @@ const Values = () => {
         }
 
         if (animation3Ref.current) {
-            animationObserver.observe(animation2Ref.current);
+            animationObserver.observe(animation3Ref.current);
         }
 
         if (animation4Ref.current) {
-            animationObserver.observe(animation2Ref.current);
+            animationObserver.observe(animation4Ref.current);
         }
 
         if (animation5Ref.current) {
-            animationObserver.observe(animation2Ref.current);
+            animationObserver.observe(animation5Ref.current);
         }
     
         return () => {
@@ -80,15 +83,15 @@ const Values = () => {
             }
 
             if (animation3Ref.current) {
-                animationObserver.unobserve(animation2Ref.current);
+                animationObserver.unobserve(animation3Ref.current);
             }
 
             if (animation4Ref.current) {
-                animationObserver.unobserve(animation2Ref.current);
+                animationObserver.unobserve(animation4Ref.current);
             }
 
             if (animation5Ref.current) {
-                animationObserver.unobserve(animation2Ref.current);
+                animationObserver.unobserve(animation5Ref.current);
             }
         };
     }, []);
@@ -119,7 +122,7 @@ const Values = () => {
                     </div>
                 </div>
                 <div className={styles.itemContainer} ref={animation3Ref}>
-                    <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
+                    <div className={`${styles.imgContainer} ${animate3 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
                         <h3 className={styles.valueText}>Agilidad de verdad</h3>
                         <Image src={Innovation} className={styles.img} />
@@ -138,7 +141,7 @@ const Values = () => {
                             para que todo se alinee de manera armónica.
                         </p>
                     </div>
-                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
+                    <div className={`${styles.imgContainer} ${animate4 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Mirada sistémica</h3>
                         <Image src={System} className={styles.img} />
@@ -151,7 +154,7 @@ const Values = () => {
                             felices son equipos que marcan la diferencia.
                         </p>
                     </div>
-                    <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
+                    <div className={`${styles.imgContainer} ${animate5 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
                         <h3 className={styles.valueText}>Felicidad organizacional</h3>
                         <Image src={People} className={styles.img} />
