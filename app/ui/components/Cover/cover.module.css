@@ -88,6 +88,27 @@
     filter: drop-shadow(2px 2px 2px #000000);
   }
 
+  .textsContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40vw;
+    gap: 2vh;
+  }
+
+  .title {
+    font-size: var(--title);
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    filter: drop-shadow(1px 1px 2px #0000008e);
+  }
+
+  
+
   @media (max-width: 799px) {
 
     .link {

@@ -6,6 +6,7 @@ import Values from "./ui/components/Values/Values";
 import Contact from "./ui/components/Contacto/Contact";
 import Services from "./ui/components/Services/Services";
 import Products from "./ui/components/Products/Products";
+import Reasons from "./ui/components/Reasons/Reasons";
 
 
 export default function Home() {
@@ -15,8 +16,9 @@ export default function Home() {
         <Banner />
         <ImageRow />
         <Values />
+        {/* <Reasons /> */}
         <Services />
-        <Products />
+        {/* <Products /> */}
         <Contact />
       </main>
   );

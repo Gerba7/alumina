@@ -65,10 +65,25 @@ const Services = () => {
             <hr className={`${styles.hr} ${animate ? styles.visible : ''}`} />
             <div className={styles.content} ref={animation2Ref}>
                 <div className={styles.top}>
-                    <div className={styles.hexagon}>
+                    {/* <div className={styles.hexagon}>
                         <div className={`${styles.card}`} style={{transform: 'none'}}>
                             <div className={`${styles.front}`}>
                                 <Image className={styles.logo} src={Logo_Alumina} alt='logo' />
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className={styles.hexagon}>
+                        <div className={`${styles.card} ${animate2 && styles.flip}`}>
+                            <div className={`${styles.front}`} />
+                            <div className={styles.textContainer}>
+                                <h3>Seguridad<br/>Psicológica</h3>
+                            </div>
+                            <div className={styles.back} />
+                            <div className={styles.pContainer}>
+                                <p className={styles.paragraph}>
+                                    Acompañamos el desarrollo de espacios de trabajo seguros e inclusivos donde todos puedan ser ellos mismos, aportar sus ideas sin
+                                    miedo y sentirse parte de un equipo sólido y confiable.
+                                </p>  {/* Arriesgamos con sentido, haciendo nuestro tu propósito. */}
                             </div>
                         </div>
                     </div>
@@ -76,11 +91,15 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`}>
                             <div className={`${styles.front} ${styles.mainColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Seguridad<br/>Psicológica</h3>
+                                <h3>Flexibilidad<br/>Psicológica</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
-                                <p className={styles.paragraph}>Arriesgamos con sentido, haciendo nuestro tu propósito.</p>
+                                <p className={styles.paragraph}>
+                                    Te ayudamos a que tu equipo pueda adaptarse rápidamente a los cambios, tomando decisiones conscientes y sabiendo cómo
+                                    afrontar las dificultades. Porque solo cuando se tienen las herramientas para adaptarse, el cambio es verdaderamente
+                                    transformador.
+                                </p>  {/* Arriesgamos con sentido, haciendo nuestro tu propósito. */}
                             </div>
                         </div>
                     </div>
@@ -88,11 +107,14 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.3s'}}>
                             <div className={`${styles.front} ${styles.secondaryColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Liderazgo<br/>Conectivo</h3>
+                                <h3>Agilidad<br/>a la Carta</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
-                                <p className={styles.paragraph}>No nos da lo mismo. Decididos, nos involucramos en el diseño de cada solución.</p>
+                                <p className={styles.paragraph}>
+                                    Agilidad no es solo trabajar rápido, es adaptarse al contexto y a los cambios en tiempo real. Te ayudamos a que tu organización no
+                                    solo reaccione con velocidad, sino que se anticipe, se transforme y aproveche las oportunidades con claridad y foco.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -102,11 +124,14 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.6s'}}>
                             <div className={`${styles.front} ${styles.terciaryColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Agilidad e<br/>Innovación</h3> 
+                                <h3>Coaching<br/>Profesional</h3>
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
-                                <p className={styles.paragraph}>El juego en equipo es la clave. Fomentamos y potenciamos la colaboración.</p>
+                                <p className={styles.paragraph}>
+                                    Acompañamiento individual o grupal, adaptado a lo que necesites. Potenciamos tus fortalezas, eliminamos bloqueos y te ayudamos
+                                    a abordar desafíos con claridad, confianza y foco.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -114,11 +139,14 @@ const Services = () => {
                         <div className={`${styles.card} ${animate2 && styles.flip}`} style={{animationDelay: '.9s'}}>
                             <div className={`${styles.front} ${styles.fourthColor}`} />
                             <div className={styles.textContainer}>
-                                <h3>Coaching<br/>Profesional</h3> 
+                                <h3>Equipos<br/>de Verdad</h3> 
                             </div>
                             <div className={styles.back} />
                             <div className={styles.pContainer}>
-                                <p className={styles.paragraph}>Lo más imporante será siempre resolver tu necesidad.</p>
+                                <p className={styles.paragraph}>
+                                    Te ayudamos a crear equipos autónomos, autoorganizados y motivados. Equipos que no solo cumplen con su tarea, sino que se
+                                    sienten parte del proceso, se adaptan rápidamente y avanzan juntos.
+                                </p>
                             </div>
                         </div>
                     </div>

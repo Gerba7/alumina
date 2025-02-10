@@ -70,9 +70,9 @@ const Navbar = () => {
         </div>
         <div className={`${styles.right} ${displayMenu ? styles.rightDisplay : ''}`}>
           <Link href='#quienes-somos' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>NOSOTROS</Link>
-          <Link href='#valores' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>VALORES</Link>
+          <Link href='#valor-agregado' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>VALOR AGREGADO</Link>
           <Link href='#servicios' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>SERVICIOS</Link>
-          <Link href='/unidades' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>PRODUCTOS</Link>
+          {/* <Link href='/unidades' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>PRODUCTOS</Link> */}
           <Link href='#contacto' className={`${styles.link} ${styles.blankRight} ${navHeight ? styles.blankRightColor : ''}`}>CONTACTO</Link>
         </div>
       </div>

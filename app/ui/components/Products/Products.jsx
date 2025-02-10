@@ -128,7 +128,7 @@ const Products = () => {
                             <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Acompañar en la identificación de barreras que impiden el desempeño deseado.
                         </p>
                         <p className={styles.productTips}>
-                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Psicoeudación sobre el miedo y su relación con el desarrollo del potencial.
+                            <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Psicoeducación sobre el miedo y su relación con el desarrollo del potencial.
                         </p>
                         <p className={styles.productTips}>
                             <DoneIcon fontSize='1vh' style={{marginTop: '2px', marginRight: '2px'}} />Brindar herramientas para un correcto manejo del estrés y presión laboral.

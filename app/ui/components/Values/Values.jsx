@@ -60,10 +60,10 @@ const Values = () => {
 
   return (
     <div className={styles.container} ref={animationRef}>
-        <div className={styles.scrollOffset} id='valores'></div>
+        <div className={styles.scrollOffset} id='valor-agregado'></div>
         <div className={styles.wrapper}>
             <h1 className={`${styles.title} ${animate ? styles.visible : ''}`}>
-                Nuestros Valores
+                Nuestro Valor Agregado
             </h1>
             <hr className={`${styles.hr} ${animate ? styles.visible : ''}`} />
         </div>
@@ -72,52 +72,52 @@ const Values = () => {
                 <div className={styles.itemContainer} ref={animation2Ref}>
                     <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
-                        <h3 className={styles.valueText}>Visión Cultural</h3>
+                        <h3 className={styles.valueText}>Catálisis Cultural</h3>
                         <Image src={Cultural} className={`${styles.img}`} />
                     </div>
                     <div className={`${styles.textContainer} ${styles.main}`}>
                         <p className={styles.text}>
-                            Tenemos en cuenta la cultura de cada organización a la hora de diseñar propuestas. 
-                            Nos enfocamos en los valores e identidad de cada una.
+                            <b>Cada empresa tiene su ADN</b>. Trabajamos con lo que ya tienen, alineando soluciones con 
+                            su propósito y la historia que quieren contar.
                         </p>
                     </div>
                 </div>
                 <div className={styles.itemContainer}>
                     <div className={`${styles.imgContainer} ${animate2 && styles.slideIn}`}>
                         <div className={`${styles.triangle} ${styles.main}`} />
-                        <h3 className={styles.valueText}>Innovación y Agilidad</h3>
+                        <h3 className={styles.valueText}>Agilidad de verdad</h3>
                         <Image src={Innovation} className={styles.img} />
                     </div>
                     <div className={`${styles.textContainer} ${styles.main}`}>
                         <p className={styles.text}>
-                            Siempre partimos de la necesidad específica de cada cliente para proponer soluciones. 
-                            Durante el despliegue fomentamos la transparencia, mejora continua y adaptación.
+                            Si alguien dice que la agilidad está muerta, es porque no la entendió. <b>La agilidad impulsa equipos de alto
+                            rendimiento y organizaciones más saludables y adaptables.</b>
                         </p>
                     </div>
                 </div>
                 <div className={styles.itemContainer}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
-                            Proveemos una mirada integral a la hora de diseñar soluciones, buscamos alternativas no estandarizadas. 
-                            Buscamos generar el mayor impacto posible de la manera más eficiente.
+                            Las organizaciones son un todo. <b>Sabemos cómo las acciones a nivel micro impactan en lo macro</b> y trabajamos
+                            para que todo se alinee de manera armónica.
                         </p>
                     </div>
                     <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
-                        <h3 className={styles.valueText}>Integral y Sistémico</h3>
+                        <h3 className={styles.valueText}>Mirada sistémica</h3>
                         <Image src={System} className={styles.img} />
                     </div>
                 </div>
                 <div className={styles.itemContainer}>
                     <div className={`${styles.textContainer} ${styles.secondary}`}>
                         <p className={styles.text}>
-                            Las personas siempre estarán en el centro. Todas las herramientas compartidas tendrán como foco a las personas, 
-                            su bienestar y realización en el ámbito laboral. Buscamos desarrollar ambientes laboral más felices.
+                            <b>Las organizaciones deben crear espacios donde las personas encuentren realización y disfrute.</b> Equipos
+                            felices son equipos que marcan la diferencia.
                         </p>
                     </div>
                     <div className={`${styles.imgContainer} ${animate2 && styles.slideOut}`}>
                         <div className={`${styles.triangle} ${styles.tRight} ${styles.secondary}`} />
-                        <h3 className={styles.valueText}>Centrado en las Personas</h3>
+                        <h3 className={styles.valueText}>Felicidad organizacional</h3>
                         <Image src={People} className={styles.img} />
                     </div>
                 </div>

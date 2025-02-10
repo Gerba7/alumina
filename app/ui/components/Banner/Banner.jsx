@@ -54,7 +54,7 @@ const Banner = () => {
         <div className={`${styles.wrapper} ${styles.row}`}>
           <div className={styles.left}>
             <div className={`${styles.title2} ${animate ? styles.visible : ''}`}>
-              Que hacemos?
+              ¿Que hacemos?
             </div>
             <h3 className={`${styles.subtitle} ${animate ? styles.visible : ''}`}>
               Consultoría especializada en psicología organizacional y coaching, centrada en la necesidad de cada cliente.
@@ -62,7 +62,7 @@ const Banner = () => {
           </div>
           <div className={styles.right}>
             <div className={`${styles.title2} ${animate ? styles.visible : ''}`}>
-              Por que lo hacemos?
+              ¿Por que lo hacemos?
             </div>
             <h3 className={`${styles.subtitle} ${animate ? styles.visible : ''}`}>
               Nuestro propósito es acompañar a las organizaciones en conseguir su máximo potencial a través del desarrollo de las personas.

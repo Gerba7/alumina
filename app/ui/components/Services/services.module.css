@@ -80,8 +80,8 @@
 }
 
 .hexagon {
-    width: 15vw;
-    height: 17vw;
+    width: 22vw; /*  15vw */
+    height: 25vw;/*  17vw */
     perspective: 1000px; 
 }
 
@@ -168,7 +168,7 @@
 }
 
 .paragraph {
-    width: 12vw;
+    width: 17vw;  /* 12vw */
 }
 
 .back {
