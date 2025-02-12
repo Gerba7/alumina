@@ -190,7 +190,6 @@
 
 .secondary {
     background-color: var(--secondary);
-    order: 2;
 }
 
 
@@ -265,6 +264,10 @@
         clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
         left: 50%;
         transform: translateY(-50%) rotate(90deg);
+    }
+
+    .secondary {
+        order: 2;
     }
 
 }
