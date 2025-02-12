@@ -11,88 +11,52 @@ import Cover from '../../../../public/images/cover4.jpg';
 
 const Products = () => {
 
-    const [animate, setAnimate] = useState(false);
-    const [animate2, setAnimate2] = useState(false);
-    const [animate3, setAnimate3] = useState(false);
-    const [animate4, setAnimate4] = useState(false);
-
-    const animationRef = useRef();
-    const animation2Ref = useRef();
-    const animation3Ref = useRef();
-    const animation4Ref = useRef();
-
+    const [animations, setAnimations] = useState([false, false, false, false, false]); // single state for all animations
+    const animationRefs = useRef([null, null, null, null, null]); // single ref for all elements
 
     useEffect(() => {
-        const animationObserver = new IntersectionObserver(
-            (entries, observer) => { 
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        if (entry.target === animationRef.current) {
-                            setAnimate(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation2Ref.current) {
-                            setAnimate2(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation3Ref.current) {
-                            setAnimate3(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation4Ref.current) {
-                            setAnimate4(true);
-                            observer.unobserve(entry.target);
-                        } 
-                    }
-                });
-            },
-            { threshold: 0 }
-        );
-    
-        if (animationRef.current) {
-            animationObserver.observe(animationRef.current);
-        }
-    
-        if (animation2Ref.current) {
-            animationObserver.observe(animation2Ref.current);
-        }
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            const index = animationRefs.current.indexOf(entry.target);
+            if (entry.isIntersecting && index !== -1) {
+            setAnimations((prev) => {
+                const updatedAnimations = [...prev];
+                updatedAnimations[index] = true;
+                return updatedAnimations;
+            });
+            observer.unobserve(entry.target); // Stop observing once the element is in view
+            }
+        });
+        }, { threshold: 0 });
 
-        if (animation3Ref.current) {
-            animationObserver.observe(animation3Ref.current);
+        // Observe all animation elements
+        animationRefs.current.forEach((ref) => {
+        if (ref) {
+            animationObserver.observe(ref);
         }
-    
-        if (animation4Ref.current) {
-            animationObserver.observe(animation4Ref.current);
-        }
-    
+        });
+
         return () => {
-            if (animationRef.current) {
-                animationObserver.unobserve(animationRef.current);
+        animationRefs.current.forEach((ref) => {
+            if (ref) {
+            animationObserver.unobserve(ref);
             }
-    
-            if (animation2Ref.current) {
-                animationObserver.unobserve(animation2Ref.current);
-            }
-
-            if (animation3Ref.current) {
-                animationObserver.unobserve(animation3Ref.current);
-            }
-    
-            if (animation4Ref.current) {
-                animationObserver.unobserve(animation4Ref.current);
-            }
+        });
         };
     }, []);
 
 
   return (
-    <div className={styles.container} ref={animationRef}>
+    <div className={styles.container} ref={animationRefs.current[1]}>
         <div className={styles.scrollOffset} id='servicios'></div>
         <div className={styles.backgroundContainer} />
         <div className={styles.wrapper}>
-            <h1 className={`${styles.title} ${animate ? styles.visible : ''}`}>
+            <h1 className={`${styles.title} ${animations[1] ? styles.visible : ''}`}>
                 Servicios
             </h1>
-            <hr className={`${styles.hr} ${animate ? styles.visible : ''}`} />
+            <hr className={`${styles.hr} ${animations[1] ? styles.visible : ''}`} />
             <div className={styles.content}>
-                <div className={`${styles.productContainer} ${animate2 ? styles.slideIn : ''} ${styles.product2}`} ref={animation2Ref}>
+                <div className={`${styles.productContainer} ${animations[1] ? styles.slideIn : ''} ${styles.product2}`} ref={(el) => (animationRefs.current[1] = el)}>
                     <h3 className={styles.productTitle}>Seguridad Psicológica</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
@@ -102,7 +66,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate2 ? styles.slideOut : ''} ${styles.product3}`} style={{right: 0}} ref={animation2Ref}>
+                <div className={`${styles.productContainer} ${animations[2] ? styles.slideOut : ''} ${styles.product3}`} style={{right: 0}} ref={(el) => (animationRefs.current[2] = el)}>
                     <h3 className={styles.productTitle}>Flexibilidad Psicológica</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -113,7 +77,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate3 ? styles.slideIn : ''} ${styles.product4}`} style={{top: '46vh'}} ref={animation3Ref}>
+                <div className={`${styles.productContainer} ${animations[3] ? styles.slideIn : ''} ${styles.product4}`} style={{top: '46vh'}} ref={(el) => (animationRefs.current[3] = el)}>
                     <h3 className={styles.productTitle}>Agilidad a la Carta</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -123,7 +87,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={animation3Ref}>
+                <div className={`${styles.productContainer} ${animations[3] ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={(el) => (animationRefs.current[3] = el)}>
                     <h3 className={styles.productTitle}>Coaching Profesional</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
@@ -133,7 +97,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={animation4Ref}>
+                <div className={`${styles.productContainer} ${animations[4] ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={(el) => (animationRefs.current[4] = el)}>
                     <h3 className={styles.productTitle}>Equipos de Verdad</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
