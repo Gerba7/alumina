@@ -15,15 +15,11 @@ const Products = () => {
     const [animate2, setAnimate2] = useState(false);
     const [animate3, setAnimate3] = useState(false);
     const [animate4, setAnimate4] = useState(false);
-    const [animate5, setAnimate5] = useState(false);
-    const [animate6, setAnimate6] = useState(false);
 
     const animationRef = useRef();
     const animation2Ref = useRef();
     const animation3Ref = useRef();
     const animation4Ref = useRef();
-    const animation5Ref = useRef();
-    const animation6Ref = useRef();
 
 
     useEffect(() => {
@@ -43,13 +39,7 @@ const Products = () => {
                         } else if (entry.target === animation4Ref.current) {
                             setAnimate4(true);
                             observer.unobserve(entry.target);
-                        } else if (entry.target === animation5Ref.current) {
-                            setAnimate5(true);
-                            observer.unobserve(entry.target);
-                        } else if (entry.target === animation6Ref.current) {
-                            setAnimate6(true);
-                            observer.unobserve(entry.target);
-                        }
+                        } 
                     }
                 });
             },
@@ -72,14 +62,6 @@ const Products = () => {
             animationObserver.observe(animation4Ref.current);
         }
     
-        if (animation5Ref.current) {
-            animationObserver.observe(animation5Ref.current);
-        }
-
-        if (animation6Ref.current) {
-            animationObserver.observe(animation6Ref.current);
-        }
-    
         return () => {
             if (animationRef.current) {
                 animationObserver.unobserve(animationRef.current);
@@ -95,14 +77,6 @@ const Products = () => {
     
             if (animation4Ref.current) {
                 animationObserver.unobserve(animation4Ref.current);
-            }
-
-            if (animation5Ref.current) {
-                animationObserver.unobserve(animation5Ref.current);
-            }
-
-            if (animation6Ref.current) {
-                animationObserver.unobserve(animation6Ref.current);
             }
         };
     }, []);
@@ -128,7 +102,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''} ${styles.product3}`} style={{right: 0}} ref={animation3Ref}>
+                <div className={`${styles.productContainer} ${animate2 ? styles.slideOut : ''} ${styles.product3}`} style={{right: 0}} ref={animation2Ref}>
                     <h3 className={styles.productTitle}>Flexibilidad Psicológica</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -139,7 +113,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn : ''} ${styles.product4}`} style={{top: '46vh'}} ref={animation4Ref}>
+                <div className={`${styles.productContainer} ${animate3 ? styles.slideIn : ''} ${styles.product4}`} style={{top: '46vh'}} ref={animation3Ref}>
                     <h3 className={styles.productTitle}>Agilidad a la Carta</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -149,7 +123,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate5 ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={animation5Ref}>
+                <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={animation3Ref}>
                     <h3 className={styles.productTitle}>Coaching Profesional</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
@@ -159,7 +133,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animate6 ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={animation6Ref}>
+                <div className={`${styles.productContainer} ${animate4 ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={animation4Ref}>
                     <h3 className={styles.productTitle}>Equipos de Verdad</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' />
