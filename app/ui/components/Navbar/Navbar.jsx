@@ -43,6 +43,11 @@ const Navbar = () => {
     setDisplayMenu(!displayMenu);
   };
 
+  const handleCloseMenu = () => {
+    setDisplayMenu(true);
+  };
+
+
   return (
     <div className={`${styles.container} ${navHeight ? styles.containerHeight : ''}`}>
       <div className={styles.wrapper}>
@@ -69,23 +74,23 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={`${styles.right} ${displayMenu ? styles.rightDisplay : ''}`}>
-          <Link href='#quienes-somos' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>
+          <Link href='#quienes-somos' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`} onClick={handleCloseMenu}>
             <div className={`${styles.linkText} ${navHeight && styles.navHeightColor}`}>
               NOSOTROS
             </div>
           </Link>
-          <Link href='#valor-agregado' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>
+          <Link href='#valor-agregado' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`} onClick={handleCloseMenu}>
             <div className={`${styles.linkText} ${navHeight && styles.navHeightColor}`}>
               VALOR AGREGADO
             </div>
           </Link>
-          <Link href='#servicios' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>
+          <Link href='#servicios' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`} onClick={handleCloseMenu}>
             <div className={`${styles.linkText} ${navHeight && styles.navHeightColor}`}>
               SERVICIOS
             </div>
           </Link>
           {/* <Link href='/unidades' className={`${styles.link} ${navHeight ? styles.linkColor : ''}`}>PRODUCTOS</Link> */}
-          <Link href='#contacto' className={`${styles.link} ${styles.blankRight} ${navHeight ? styles.blankRightColor : ''}`}>
+          <Link href='#contacto' className={`${styles.link} ${styles.blankRight} ${navHeight ? styles.blankRightColor : ''}`} onClick={handleCloseMenu}>
             <div className={`${styles.linkText} ${navHeight && styles.navHeightColor}`}>
               CONTACTO
             </div>

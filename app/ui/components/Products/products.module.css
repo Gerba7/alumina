@@ -178,9 +178,9 @@
 
 .logo {
     position: absolute;
-    bottom: -35%;
+    bottom: -50%;
     right: 0;
-    width: 15vw;
+    width: 10vw;
     height: auto;
     opacity: .1;
 }

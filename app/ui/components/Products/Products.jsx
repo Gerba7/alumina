@@ -95,7 +95,7 @@ const Products = () => {
                 <div className={`${styles.productContainer} ${animate2 ? styles.slideIn : ''} ${styles.product2}`} ref={animation2Ref}>
                     <h3 className={styles.productTitle}>Seguridad Psicológica</h3>
                     <div className={styles.productItem}>
-                        <Image className={styles.logo} src={Logo} alt='logo' />
+                        <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
                         <p className={styles.productTips}>
                             Acompañamos el desarrollo de espacios de trabajo seguros e inclusivos donde todos puedan ser ellos mismos, aportar sus ideas sin
                             miedo y sentirse parte de un equipo sólido y confiable.
@@ -126,7 +126,7 @@ const Products = () => {
                 <div className={`${styles.productContainer} ${animate3 ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={animation3Ref}>
                     <h3 className={styles.productTitle}>Coaching Profesional</h3>
                     <div className={styles.productItem}>
-                        <Image className={styles.logo} src={Logo} alt='logo' />
+                        <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
                         <p className={styles.productTips}>
                             Acompañamiento individual o grupal, adaptado a lo que necesites. Potenciamos tus fortalezas, eliminamos bloqueos y te ayudamos
                             a abordar desafíos con claridad, confianza y foco.
@@ -136,7 +136,7 @@ const Products = () => {
                 <div className={`${styles.productContainer} ${animate4 ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={animation4Ref}>
                     <h3 className={styles.productTitle}>Equipos de Verdad</h3>
                     <div className={styles.productItem}>
-                        <Image className={styles.logo} src={Logo} alt='logo' />
+                        <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
                         <p className={styles.productTips}>
                             Te ayudamos a crear equipos autónomos, autoorganizados y motivados. Equipos que no solo cumplen con su tarea, sino que se
                             sienten parte del proceso, se adaptan rápidamente y avanzan juntos.
