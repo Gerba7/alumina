@@ -11,8 +11,8 @@ import Cover from '../../../../public/images/cover4.jpg';
 
 const Products = () => {
 
-    const [animations, setAnimations] = useState([false, false, false, false, false]); // single state for all animations
-    const animationRefs = useRef([null, null, null, null, null]); // single ref for all elements
+    const [animations, setAnimations] = useState([false, false, false, false, false, false]); // single state for all animations
+    const animationRefs = useRef([null, null, null, null, null, null]); // single ref for all elements
 
     useEffect(() => {
         const animationObserver = new IntersectionObserver((entries, observer) => {
@@ -47,14 +47,14 @@ const Products = () => {
 
 
   return (
-    <div className={styles.container} ref={animationRefs.current[1]}>
+    <div className={styles.container} ref={(el) => (animationRefs.current[0] = el)}>
         <div className={styles.scrollOffset} id='servicios'></div>
         <div className={styles.backgroundContainer} />
         <div className={styles.wrapper}>
-            <h1 className={`${styles.title} ${animations[1] ? styles.visible : ''}`}>
+            <h1 className={`${styles.title} ${animations[0] ? styles.visible : ''}`}>
                 Servicios
             </h1>
-            <hr className={`${styles.hr} ${animations[1] ? styles.visible : ''}`} />
+            <hr className={`${styles.hr} ${animations[0] ? styles.visible : ''}`} />
             <div className={styles.content}>
                 <div className={`${styles.productContainer} ${animations[1] ? styles.slideIn : ''} ${styles.product2}`} ref={(el) => (animationRefs.current[1] = el)}>
                     <h3 className={styles.productTitle}>Seguridad Psicológica</h3>
@@ -87,7 +87,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animations[3] ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={(el) => (animationRefs.current[3] = el)}>
+                <div className={`${styles.productContainer} ${animations[4] ? styles.slideOut : ''} ${styles.product5}`} style={{top: '46vh', right: 0}} ref={(el) => (animationRefs.current[4] = el)}>
                     <h3 className={styles.productTitle}>Coaching Profesional</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
@@ -97,7 +97,7 @@ const Products = () => {
                         </p>
                     </div>
                 </div>
-                <div className={`${styles.productContainer} ${animations[4] ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={(el) => (animationRefs.current[4] = el)}>
+                <div className={`${styles.productContainer} ${animations[5] ? styles.slideIn2 : ''} ${styles.product6}`} style={{top: '92vh', left: '25%'}} ref={(el) => (animationRefs.current[5] = el)}>
                     <h3 className={styles.productTitle}>Equipos de Verdad</h3>
                     <div className={styles.productItem}>
                         <Image className={styles.logo} src={Logo} alt='logo' style={{bottom: '-70%'}} />
